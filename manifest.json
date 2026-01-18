@@ -1,0 +1,15 @@
+{
+  "name": "Didattica Razionale",
+  "short_name": "Razionali",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#339af0",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
