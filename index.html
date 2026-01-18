@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didattica Razionale - Gianluca Mantione</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <button onclick="mostraSezione('calcolatore')">Calcolatore</button>
+            <button onclick="mostraSezione('esercizi')">Esercitazione</button>
+        </nav>
+
+        <section id="calcolatore">
+            <h1>Calcolatore di Frazioni</h1>
+            <div class="flex-row">
+                <div class="frazione-input">
+                    <input type="number" id="n1" placeholder="n">
+                    <hr>
+                    <input type="number" id="d1" placeholder="d">
+                </div>
+                <select id="operazione">
+                    <option value="piu">+</option>
+                    <option value="meno">-</option>
+                    <option value="per">×</option>
+                    <option value="diviso">÷</option>
+                </select>
+                <div class="frazione-input">
+                    <input type="number" id="n2" placeholder="n">
+                    <hr>
+                    <input type="number" id="d2" placeholder="d">
+                </div>
+            </div>
+            <button onclick="calcola()" class="btn-primary">Calcola Risultato</button>
+            <button onclick="resetTutto()" class="btn-reset">Svuota Campi</button>
+        </section>
+
+        <section id="esercizi" style="display:none;">
+            <h1>Mettiti alla Prova</h1>
+            <div id="testo-esercizio">Clicca "Nuovo Esercizio" per iniziare!</div>
+            <div class="flex-row">
+                <div class="frazione-input">
+                    <input type="number" id="ris-n" placeholder="n">
+                    <hr>
+                    <input type="number" id="ris-d" placeholder="d">
+                </div>
+            </div>
+            <button onclick="controllaEsercizio()" class="btn-primary">Verifica Risposta</button>
+            <button onclick="nuovoEsercizio()" class="btn-reset">Nuovo Esercizio</button>
+        </section>
+
+        <div id="risultato">
+            <div id="output">Seleziona una sezione sopra per iniziare.</div>
+        </div>
+
+        <footer>
+            Sito di Gianluca Mantione
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
